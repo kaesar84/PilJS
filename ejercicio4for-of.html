@@ -1,0 +1,47 @@
+<!-- Crea un programa que pida mediante ventana de prompt cinco números al usuario. Almacena los números introducidos por el usuario en un array utilizando un bucle for normal. A continuación, usando un for of que recorra el array, muestra un mensaje informando del resultado en el navegador de multiplicar cada uno de los números por 5.
+
+Ejemplo:
+
+Se pedirán al usuario cinco números, supongamos que introduce 2, 4, 10, 11 y 8
+
+A continuación, se mostrará el siguiente mensaje en el navegador:
+
+El resultado de multiplicar por 5 los números es:
+
+2 x 5 = 10
+
+4 x 5 = 20
+
+10 x 5 = 50
+
+11 x 5 = 55
+
+8 x 5 =40. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercio 4 - for of</title>
+  </head>
+  <body>
+    <script>
+      let numeros = [];
+
+      // cantidad de numeros introducidos
+      let opcion = parseInt(prompt("Cuántos números quieres introducir"));
+
+      for (let i = 0; i < opcion; i++) {
+        let intro = parseInt(prompt("Introduce los números"));
+        numeros.push(intro);
+      }
+
+      // multiplicador elegible
+      let multiplicador = parseInt(prompt("Multiplicador"));
+      for (let numero of numeros) {
+        console.log(`${numero} * ${multiplicador} = ${numero * multiplicador}`);
+      }
+    </script>
+  </body>
+</html>

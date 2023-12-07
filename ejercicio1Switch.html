@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1 - Switch</title>
+  </head>
+  <body>
+    <script>
+      var codClima = prompt("Introduce el código");
+      codClima = parseInt(codClima);
+
+      switch (codClima) {
+        case 1:
+          document.write(`${codClima} - Día soleado`);
+          break;
+        case 2:
+          document.write(`${codClima} - Parcialmente nublado`);
+          break;
+        case 3:
+          document.write(`${codClima} - Mayormente nublado`);
+          break;
+        case 4:
+          document.write(`${codClima} - Lluvioso`);
+          break;
+        case 5:
+          document.write(`${codClima} - Nieve`);
+          break;
+        case 6:
+          document.write(`${codClima} - Tormenta`);
+          break;
+        default:
+          document.write(`Código introducido55
+           erroneo`);
+          break;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+Nivel de dificultad: Rastrero principiante
+Crea un programa JavaScript que se ejecute en el navegador.
+Objetivo del ejercicio:
+Estás creando una simple aplicación meteorológica. Los datos del clima se obtienen en forma de códigos numéricos desde una ventana de tipo prompt, y debes convertir estos códigos en descripciones legibles.
+Descripción de códigos de clima:
+• 1: Día soleado
+• 2: Parcialmente nublado
+• 3: Mayormente nublado
+• 4: Lluvioso
+• 5: Nieve
+• 6: Tormenta
+La estructura switch-case debe tomar el código de clima como condición e imprimir la descripción correspondiente en la página web. Debes crear una opción válida en caso de que el usuario no introduzca en el prompt ninguna de las opciones anteriores.
+Pista: Tal vez debas utilizar la función parseInt(). ¿No sabes para qué sirve? Si lo quieres saber, haz clic en el siguiente link:
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+Posible solución en la siguiente página (no olvides que en programación siempre hay varios caminos que te llevan a Roma. Tal vez se te haya ocurrido una solución diferente a la que figura a continuación). -->

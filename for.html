@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      var edades = [39, 38, 12, 6];
+
+      console.log(edades);
+
+      // for
+      console.log(">> for ");
+      for (let i = 0; i < edades.length; i++) {
+        console.log(edades[i]);
+      }
+
+      // for each
+      console.log(">> for each");
+      edades.forEach((element) => {
+        console.log(element);
+      });
+
+      // for of
+      console.log(">> for of");
+      for (let i of edades) {
+        console.log(i);
+      }
+
+      // string
+      console.log(">> string");
+      let string = "hola";
+      for (let i of string) {
+        console.log(i);
+      }
+
+      // multidimensional
+      console.log(">> Multidimenensional");
+      let datos = [
+        [1, 7, 9],
+        [5, 6, 8],
+        [2, 5, 9],
+      ];
+      console.log(">> for");
+      for (let i = 0; i < datos.length; i++) {
+        for (let j = 0; j < datos.length; j++) {
+          console.log(datos[i][j]);
+        }
+      }
+      console.log(">> for of");
+      for (const dim1 of datos) {
+        for (const dim2 of dim1) {
+          console.log(dim2);
+        }
+      }
+
+      // email
+      console.log(">> Email tiene arroba?");
+      let email = "kaesar84@gmail.com";
+      let check;
+
+      for (let letra of email) {
+        if (letra == "@") {
+          check = true;
+        }
+        console.log(letra);
+      }
+      check ? console.log("Email correcto") : console.error("Email incorrecto");
+    </script>
+  </body>
+</html>
