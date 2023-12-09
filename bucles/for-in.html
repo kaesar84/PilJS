@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For in</title>
+  </head>
+  <body>
+    <script>
+      let Coche = {
+        color: "rojo",
+        peso: 1200,
+        potencia: 250,
+        cilindrada: 2000,
+      };
+
+      //   console.warn("for of");
+      //   let claveValor="";
+      //   for(let propiedad of Object.keys(Coche)){
+      //     claveValor+=propiedad;
+      //     claveValor+=" "
+      //   }
+      //   console.log( claveValor);
+
+      console.warn("for in");
+      for (const propiedad in Coche) {
+        console.log(propiedad + " : " + Coche[propiedad]);
+      }
+    </script>
+  </body>
+</html>

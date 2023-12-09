@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uso break</title>
+  </head>
+  <body>
+    <script>
+      let email = "kaesar84@gmail.com";
+      let arroba = false;
+
+      for (let i = 0; i < email.length; i++) {
+        console.log(`Evaluando el caracter ${email[i]} del e-mail`)
+        if (email[i] == "@") {
+          arroba = true;
+          console.warn(">>> Encontrada @");
+          break;
+        }
+      }
+
+      arroba
+        ? console.log("E-mail correcto")
+        : console.log("E-mail incorrecto");
+    </script>
+  </body>
+</html>

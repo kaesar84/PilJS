@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uso break 2</title>
+  </head>
+  <body>
+    <script>
+      let paises = [];
+      let paisIntro = null;
+      let paisBuscado = "";
+      let checkPais;
+
+      do {
+        paisIntro = prompt("Introduce pais");
+        if (paisIntro === "" || paisIntro === null) {
+          break;
+        }
+        paises.push(paisIntro);
+      } while (paisIntro != null);
+
+      paisBuscado=prompt("Pais a buscar");
+
+      for (const pais of paises) {
+        if (pais == paisBuscado) {
+          checkPais = true;
+          break;
+        } else {
+          checkPais = false;
+        }
+      }
+      checkPais
+        ? alert("CONTIENE EL PAIS")
+        : alert("NO ESTA EL PAIS");
+
+      console.log(paises);
+    </script>
+  </body>
+</html>
