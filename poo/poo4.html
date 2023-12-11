@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poo 4</title>
+  </head>
+  <body>
+    <script>
+      let empleado = {
+        salario: 40000,
+        comision: 10000,
+        toString: function () {
+          return `El salario es ${this.salario} y la comisión es de ${this.comision}`;
+        },
+        toLocaleString: function () {
+          return `El salario es ${this.salario.toLocaleString()} y la comisión es de ${this.comision.toLocaleString()}`;
+        },
+      };
+
+      // toLocaleString - Localiza el formato
+      console.log(empleado.toString());
+      console.log(empleado.toLocaleString());
+
+      // fechas
+      let fecha = new Date(1984, 5, 21);
+      console.log(fecha);
+      console.log(fecha.toLocaleDateString());
+
+      // value of con fechas
+      console.log(fecha.valueOf());
+
+      // strings
+      let string = new String("Creación de un objeto string");
+      console.log(string);
+      // value of con fechas
+      console.log(string.valueOf());
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poo 1</title>
+  </head>
+  <body>
+    <script>
+      // Formas de crear objeto
+      //Literal
+
+      let persona1 = {
+        nombre: "César",
+        edad: 39,
+      };
+
+      let coche = {
+        color: "rojo",
+        potencia: 400,
+        propietario: persona1,
+      };
+
+      // Acceso a propiedades
+      console.log(coche);
+      console.log(typeof coche);
+      console.log(coche.color);
+
+      console.log("Nombre del propietario: " + coche.propietario.nombre);
+
+      // new - Heredan de object y tienen las propias, prototipo (Similasr super clase)
+      let miArray = new Array();
+      console.log(miArray);
+
+      let miMap = new Map();
+      console.log(miMap);
+
+      // creando con create
+      let moto = Object.create({ color: "rosa", potencia: 600 });
+
+      // ACCESOS y MODIFICACIONES a propiedades
+      console.warn("acceso");
+      console.log(coche.color);
+      coche.color = "amarillo";
+      console.log(coche.color);
+
+      console.log(coche["potencia"]);
+      coche["potencia"] = 5000;
+      console.log(coche["potencia"]);
+
+      // añadir propiedad en tiempo de ejecución
+      coche["pasajeros"] = 5;
+      console.log(coche["pasajeros"]);
+      console.log(coche);
+
+      // borrar propiedad en tiempo de ejecución
+      let borradoExito = delete coche.propietario; // boleano devuelve true
+      console.log(borradoExito);
+      console.log(coche);
+
+      // saber si tiene una propuedad
+      console.log(coche.hasOwnProperty("propietario"));
+
+      // recorrer todas las propiedades
+      console.warn("Propiedades");
+      for (let propiedades in coche) {
+        console.log(propiedades);
+      }
+    </script>
+  </body>
+</html>

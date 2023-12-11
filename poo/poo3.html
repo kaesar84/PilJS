@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poo 3 - JSON</title>
+  </head>
+  <body>
+    <script>
+      let persona1 = {
+        nombre: "César",
+        edad: 39,
+      };
+      let coche = {
+        color: "rojo",
+        potencia: 400,
+        propietario: persona1,
+        pasajeros: 5,
+        toString: function () {
+          return `El color del coche es ${this.color}, la potencia del coche es ${this.potencia}, el propietario del vehiculo se llama ${this.propietario.nombre} y tiene una edad de ${this.propietario.edad}. El vehiculo tiene una capacidad para ${this.pasajeros} pasajeros.`;
+        },
+      };
+
+      console.log(coche);
+
+      // Serializar, pasar de objeto a string
+      console.warn("Serializado");
+      let cocheSerializado = JSON.stringify(coche);
+      console.log(cocheSerializado);
+      console.warn("Deserializado");
+      // Deserializar, pasar de string a objeto
+      let cocheDeserializado = JSON.parse(cocheSerializado);
+      console.log(cocheDeserializado);
+
+      // to string - solo muestra en formato texto, no transforma como serializar
+      console.warn("toString");
+      console.log(coche.toString());
+    </script>
+  </body>
+</html>

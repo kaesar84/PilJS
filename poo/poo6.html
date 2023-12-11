@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poo 6</title>
+  </head>
+  <body>
+    <script>
+      
+      let coche = {
+       color: "rosa",
+       potencia: 400,
+      };
+
+      let furgoneta = {capacidad:"grande", autonomia:"Extendida"}
+
+      // spread
+      let suv = {...coche,...furgoneta};
+
+      console.warn("coche");
+      console.log(coche);
+      console.warn("furgoneta");
+      console.log(furgoneta);
+      console.warn("suv -> extendida");
+      console.log(suv);
+
+    </script>
+  </body>
+</html>

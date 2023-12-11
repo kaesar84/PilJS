@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5 - Break</title>
+  </head>
+  <body>
+    <script>
+      // Crea un programa que pida mediante ventanas de prompt 2 números. El programa debe mostrar los 3 primeros números primos comprendidos en el rango de los números introducidos.
+      // Por ejemplo: Si introducimos como primer número un 5 y como segundo número un 20, el programa debe mostrar los 3 primeros números primos comprendidos entre 5 y 20, es decir, “5 7 11”.
+      // Debes incluir en tu programa la instrucción “break”.
+
+      let numeroInicial = parseInt(prompt("Introduce el número inicial"));
+      let numeroFinal = parseInt(prompt("Introduce el número final"));
+
+      let contador = 0;
+
+      for (
+        let numeroEvaluar = numeroInicial;
+        numeroEvaluar < numeroFinal;
+        numeroEvaluar++
+      ) {
+        
+        let primo = true;
+
+        for (let i = 2; i < numeroEvaluar; i++) {
+          if (numeroEvaluar % i == 0) {
+            primo = false;
+            break;
+          }
+        }
+
+        if (primo) {
+          // solo los 3 primeros
+          console.log(numeroEvaluar);
+          contador++;
+          if (contador == 3) break;
+        }
+      }
+    </script>
+  </body>
+</html>

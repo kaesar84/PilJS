@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poo 2</title>
+  </head>
+  <body>
+    <script>
+      let persona1 = {
+        nombre: "César",
+        edad: 39,
+      };
+
+      let coche = {
+        color: "rojo",
+        potencia: 400,
+        propietario: persona1,
+      };
+
+      coche["pasajeros"] = 5;
+
+      console.log(coche);
+
+      let furgoneta = {
+        carga: 4500,
+      };
+
+      console.log(furgoneta);
+
+      // copiar propiedades de un objeto a otro (destino, origen)
+      Object.assign(furgoneta, coche);
+
+      //   for (const clave of Object.keys(coche)) {
+      //     furgoneta[clave] = coche[clave];
+      //   }
+      console.log(furgoneta);
+
+     
+        
+
+
+    </script>
+  </body>
+</html>

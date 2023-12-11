@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uso Yield</title>
+  </head>
+  <body>
+    <script>
+      // Para generadores - yield como el return pero devuelve los valores uno a uno
+
+      // devuelve los numeros entre rangos
+      function* rango(numInicial, numFinal) {
+        for (let i = numInicial; i <= numFinal; i++) {
+          yield i;
+        }
+        console.warn("final");
+      }
+
+      let numero = rango(5, 15);
+      console.log(numero.next().value);
+      console.log(numero.next().value);
+      console.log(numero.next().value);
+      console.log(numero.next().value);
+      console.log(numero.next().value);
+      console.log(numero.next().value);
+      console.log(numero.next().value);
+      console.log(numero.next().value);
+      console.log(numero.next().value);
+      console.log(numero.next().value);
+      console.log(numero.next().value);
+      console.log(numero.next().value);
+      console.log(numero.next().value);
+    </script>
+  </body>
+</html>

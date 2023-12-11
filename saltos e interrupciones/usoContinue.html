@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uso continue</title>
+  </head>
+  <body>
+    <script>
+      let num_trabajador = 0;
+      let salarios = [];
+
+      for (let i = 0; i < 5; i++) {
+        num_trabajador++;
+        let salario = parseFloat(
+          prompt("Introduce el salario del trabajador " + num_trabajador)
+        );
+        // los que cobran 1000 o menos no aplica reducción del 25%
+        if (salario <= 1000) {
+          salarios[i] = salario;
+          continue;
+        } else {
+          salarios[i] = salario * 0.75;
+        }
+      }
+
+      for (let salario of salarios) {
+        if (!salario) {
+          continue;
+        }
+        console.info(salario);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uso Try Catch</title>
+  </head>
+  <body>
+    <script>
+      // busca el factorial -5 = 5*4*3*2*1=120
+      function factorial(num) {
+        try {
+          if (num < 0) throw new Error("Número negativo");
+        } catch (e) {
+          // la e es el objeto error
+          console.error(e);
+        }
+
+        let factorial;
+        for (factorial = 1; num > 1; num--) {
+          factorial *= num;
+        }
+        return factorial;
+      }
+
+      let numeroIntro = parseInt(prompt("Introduce un número"));
+      let resultadoFactorial = factorial(numeroIntro);
+      console.log(resultadoFactorial);
+    </script>
+  </body>
+</html>
