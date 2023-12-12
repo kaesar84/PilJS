@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 10 - Arrays</title>
+  </head>
+  <body>
+    <script>
+      let numeros = [5, 10, 15, 20, 25];
+      let resultadoSuma = 0;
+
+      // for each
+      console.log(">>> FOR EACH");
+      numeros.forEach(function (elemento_array) {
+        console.log(elemento_array);
+      });
+
+      // for each flecha
+      console.log(">>> FOR EACH =>");
+      numeros.forEach((element) => {
+        console.log(element);
+      });
+
+      // for each funcion propia
+      console.log(">>> FOR EACH funcion propia");
+      numeros.forEach(sumando);
+
+      // Suma los valores
+      function sumando(valor) {
+        resultadoSuma += valor;
+      }
+      console.log(`La suma de los valores del array es: ${resultadoSuma}`);
+
+      resultadoSuma = 0;
+      console.log(">>> FOR EACH funcion ANONIMA");
+      numeros.forEach(function (valor) {
+        resultadoSuma += valor;
+      });
+      console.log(`La suma de los valores del array es: ${resultadoSuma}`);
+
+      resultadoSuma = 0;
+      console.log(">>> FOR EACH funcion CON FLECHA");
+      numeros.forEach(valor => {
+        resultadoSuma += valor;
+      });
+      console.log(`La suma de los valores del array es: ${resultadoSuma}`);
+
+   // varios parametros en el for each - suma 1 los valores
+      numeros.forEach(function(valor,indice,elemento_array){
+        elemento_array[indice]=valor+1;
+      });
+
+      console.log(numeros);
+
+    </script>
+  </body>
+</html>
