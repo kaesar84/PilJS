@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 4 - Constructor Array</title>
+  </head>
+  <body>
+    <script>
+      let numeros = new Array();
+
+      let numDatos = parseInt(
+        prompt("Cuantos elementos quieres que tenga el array?")
+      );
+
+      while (numDatos > 0) {
+        let intro = parseInt(prompt("mete un numero"));
+        numeros.push(intro);
+        numDatos--;
+      }
+
+      console.log(numeros);
+
+
+      let paises =["Brasil","Colombia","Argentina"];
+      let nuevoArrayPaises = Array.from(paises)
+    </script>
+  </body>
+</html>

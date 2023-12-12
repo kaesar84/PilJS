@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poo 9</title>
+  </head>
+  <body>
+    <script>
+      // getters setters
+      let persona = {
+        nombre: "Juana",
+        apellido: "Ruiz",
+
+        get dameNombreCompleto() {
+          return `${this.nombre} ${this.apellido}`;
+        },
+
+        set nuevoNombre(nuevoNombre){
+          this.nombre=nuevoNombre;
+        },
+
+        set nuevoApellido(nuevoApellido){
+          this.apellido=nuevoApellido;
+        }
+
+        
+      };
+
+      console.log(persona);
+      console.log(persona.dameNombreCompleto);
+      console.log(persona.nuevoNombre="César");
+      console.log(persona.nuevoApellido="Fernández");
+
+      console.log(persona);
+
+   
+    </script>
+  </body>
+</html>

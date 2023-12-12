@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 6 - Añadir o eliminar</title>
+  </head>
+  <body>
+    <script>
+      let ciudades = ["Barcelona", "Tarragona", "Lleida", "Girona"];
+      console.log(ciudades);
+
+      // ** AÑADIR
+      // push añade al final
+      ciudades.push("L'Hospitalet de Llobregat", "Badalona");
+      console.log(ciudades);
+
+      // unshift  añade al principio
+      ciudades.unshift("Martorell", "Igualada");
+      console.log(ciudades);
+
+
+      // ** ELIMINAR
+      // pop elimina al final
+      ciudades.pop();
+      console.log(ciudades);
+
+      // shift elimina al principio
+      ciudades.shift();
+      console.log(ciudades);
+
+      // delete - vacia la posicion - mantiene longitud
+      delete ciudades[1];
+      console.log(ciudades);
+
+
+    </script>
+  </body>
+</html>

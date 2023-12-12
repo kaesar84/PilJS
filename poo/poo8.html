@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poo 8</title>
+  </head>
+  <body>
+    <script>
+      let triangulo = {
+        base: 12,
+        altura: 15,
+        get area() {
+          return (this.base * this.altura) / 2;
+        },
+
+        set area(nuevaBase) {
+          this.base = nuevaBase;
+        },
+
+      };
+
+      // sin parentesis ya que es una propiedad.
+      console.log(triangulo.area);
+
+      //uso del set
+      triangulo.area=100;
+      console.log(triangulo.area);
+      
+    </script>
+  </body>
+</html>

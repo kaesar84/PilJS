@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 7 - Recorrer arrays</title>
+  </head>
+  <body>
+    <script>
+      let ciudades = ["Barcelona", "Tarragona", "Lleida", "Girona"];
+      console.log(ciudades);
+
+      let lista = "";
+
+      console.log(">>>>> FOR of con indice");
+      for (let ciudad of ciudades) {
+        console.log(ciudad);
+        lista += ciudad + " ";
+      }
+      console.log(lista);
+      console.log("-------------");
+
+      console.log(">>>>> FOR of con indice");
+      // para tener los indices con for of
+      for (let [indice, ciudad] of ciudades.entries()) {
+        console.log(indice, ciudad);
+      }
+      console.log(">>>>> FOR EACH");
+      // CON FOR EACH
+
+      let listaMayus = "";
+      ciudades.forEach((ciudad) => {
+        // los convertimos en mayusculas
+        listaMayus += ciudad.toLocaleUpperCase() + " ";
+      });
+      console.log(listaMayus);
+    </script>
+  </body>
+</html>

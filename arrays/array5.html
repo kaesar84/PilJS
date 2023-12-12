@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 5 - From</title>
+  </head>
+  <body>
+    <script>
+      let numeros = [5, 10, 15, 20, 25, 50];
+
+      // pasa cada posicion del array a la funcion
+      let numeros_from = Array.from(numeros, doble);
+
+      console.log(numeros);
+      console.log(numeros_from);
+
+      function doble(valor) {
+        return valor * 2;
+      }
+    </script>
+  </body>
+</html>
