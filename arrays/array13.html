@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 13</title>
+  </head>
+  <body>
+    <script>
+      let edades = [35, 15, 25, 69, 81, 36, 51, 55];
+      console.log(edades);
+
+      let nombres = ["Ana", "Juan", "Pedro", "Maria", "Juan"];
+
+      // Stack (pila) - Acumula
+      //Queue (cola) - El primer elemento desaparece
+
+      // ultimos elementos
+      edades.push(69, 100);
+      console.log(edades);
+      edades.pop();
+      console.log(edades);
+      let borradoPop = edades.pop();
+      console.log(borradoPop);
+
+      //primeros elementos
+
+      console.log(nombres);
+      nombres.unshift("Luis");
+      console.log(nombres);
+      let borradoShift= nombres.shift();
+      console.log(borradoShift);
+    </script>
+  </body>
+</html>

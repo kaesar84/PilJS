@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 11 - Map</title>
+  </head>
+  <body>
+    <script>
+console.warn("Lista completa");
+let gameList = [
+    {
+        title: 'Returnal',
+        platform: 'PS5',
+        price: 79
+    },
+    {
+        title: 'Resident Evil Village',
+        platform: 'PC',
+        price: 59
+    },
+    {
+        title: 'Little Nightmares 2',
+        platform: 'PC',
+        price: 20
+    }
+];
+for (const game of gameList) {
+  console.log(game);
+
+  for (const platform in game) {
+    if (Object.hasOwnProperty.call(game, platform)) {
+      const element = game[platform];
+      console.log(element)
+    }
+  }
+}
+
+// lista de nombres con map
+
+console.warn("Lista de títulos");
+let gameTitles = gameList.map(game =>{
+  return game.title;
+});
+
+console.log(gameTitles)
+
+          </script>
+  </body>
+</html>

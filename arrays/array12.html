@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 11 - Map</title>
+  </head>
+  <body>
+    <script>
+      let edades = [35, 15, 25, 69, 81, 36, 51, 55];
+
+      let nombres = ["Ana", "Juan", "Pedro", "Maria", "Juan"];
+
+      // findindex()
+      console.log(nombres.findIndex((encontrar) => encontrar == "Ana")); //0
+      console.log(nombres.findIndex((encontrar) => encontrar == "Juan")); // si hay repetidos da el 1º
+      console.log(edades.findIndex((encontrar) => encontrar < 30)); //1
+
+      // find() - devuelve el elemento
+      console.log(edades.find((encontrar) => encontrar < 30)); //15
+      console.log(edades.find((encontrar) => encontrar % 2 == 0)); // 36
+      console.log(edades.find((encontrar) => encontrar < -330)); //undefinded
+
+      console.log(nombres.find((primeraLetra) => primeraLetra.charAt("0") == "J")); // que empiezan por J
+      console.log(
+        nombres.find(
+          (ultimaLetra) => ultimaLetra.charAt(ultimaLetra.length - 1) == "a"
+        )
+      ); // los que acaban por a
+
+      // every() devuelve si TODOS los valores de un array cumplen condicion (boolean)
+      console.log(edades.every((encontrar) => (menor100) => menor100 < 100));
+
+      console.log(
+        nombres.every(
+          (primeraLetra) =>
+            primeraLetra.charAt(0) == "a" || primeraLetra.charAt(0) == "A"
+        )
+      );
+
+      // some() devuelve si ALGUNO los valores de un array cumplen condicion (boolean)
+      console.log(edades.some((encontrar) => (menor100) => menor100 < 100));
+      console.log(
+        nombres.some(
+          (encontrar) =>
+            encontrar.charAt(0) == "a" || encontrar.charAt(0) == "A"
+        )
+      );
+    </script>
+    //15
+  </body>
+</html>

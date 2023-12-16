@@ -41,18 +41,17 @@
 
       resultadoSuma = 0;
       console.log(">>> FOR EACH funcion CON FLECHA");
-      numeros.forEach(valor => {
+      numeros.forEach((valor) => {
         resultadoSuma += valor;
       });
       console.log(`La suma de los valores del array es: ${resultadoSuma}`);
 
-   // varios parametros en el for each - suma 1 los valores
-      numeros.forEach(function(valor,indice,elemento_array){
-        elemento_array[indice]=valor+1;
+      // varios parametros en el for each - suma 1 los valores
+      numeros.forEach(function (valor, indice, elemento_array) {
+        elemento_array[indice] = valor + 1;
       });
 
       console.log(numeros);
-
     </script>
   </body>
 </html>
