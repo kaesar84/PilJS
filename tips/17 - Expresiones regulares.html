@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expresiones regulares</title>
+  </head>
+  <body>
+    <script>
+      const correo = "miEmail@gmail.com";
+
+      const regex = /^[a-zA-Z0-9._-]+@gmail.com$/;
+      const validar = regex.test(correo);
+
+      console.log(validar);
+    </script>
+  </body>
+</html>
