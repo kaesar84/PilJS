@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 6 Class</title>
+  </head>
+  <body>
+    <!-- Crea un programa JavaScript que se ejecute en el navegador.
+
+Crea una clase con el nombre de “Vehículo”. Esta clase creará objetos de tipo vehículo con las siguientes características:
+
+Método constructor que permita dar valor inicial a las siguientes propiedades:
+Modelo
+Marca
+Precio
+Km
+Métodos que permitan cambiar (setter) y obtener (getter) información de cada una de las propiedades. (Método setter es aquel método cuyo nombre comienza por “set” y getter el que comienza por “get”)
+Método que permita obtener por consola la marca y el modelo del Vehículo. Por ej: “Renault Laguna” 
+    Crea un objeto-->
+
+    <script>
+      class Coche {
+        constructor(modelo, marca, precio, km) {
+          this.modelo = modelo;
+          this.marca = marca;
+          this.precio = precio;
+          this.km = km;
+        }
+
+        // getters
+        get dameModelo() {
+          return this.modelo;
+        }
+        get dameMarca() {
+          return this.marca;
+        }
+        get damePrecio() {
+          return this.precio;
+        }
+        get dameKm() {
+          return this.km;
+        }
+
+        // seters
+        setModelo(modelo) {
+          this.modelo = modelo;
+        }
+        setMarca(marca) {
+          this.marca = marca;
+        }
+        setPrecio(precio) {
+          this.precio = precio;
+        }
+        setKm(km) {
+          this.km = km;
+        }
+      }
+
+      let coche1 = new Coche("Laguna", "Renault", 30000, 15000);
+
+      document.write(`
+      Modelo: ${coche1.dameModelo}<br>
+      Marca: ${coche1.dameMarca}<br>
+      Precio: ${coche1.damePrecio}<br>
+      Km: ${coche1.dameKm}<br>
+      `);
+
+      coche1.setModelo("León");
+      coche1.setMarca("Seat");
+      coche1.setPrecio(25000);
+      coche1.setKm(120000);
+
+      document.write("<hr>");
+      document.write(`
+      Modelo: ${coche1.dameModelo}<br>
+      Marca: ${coche1.dameMarca}<br>
+      Precio: ${coche1.damePrecio}<br>
+      Km: ${coche1.dameKm}<br>
+      `);
+
+      // Crea un programa JavaScript que se ejecute en el navegador.
+      // Sobre el ejercicio anterior, crea una clase con el nombre “Furgoneta” que herede de “Vehículo”.
+      // Crea un constructor que permita dar estado inicial a las propiedades de modelo, marca, precio, km y carga
+      // Crea método getter y setter que permita establecer y obtener la carga
+      // Crea método que permita obtener la marca, el modelo y la carga de los objetos de tipo Furgoneta
+      // Crea un objeto de tipo Furgoneta para comprobar su funcionamiento
+
+      class Furgoneta extends Coche {
+        constructor(modelo, marca, precio, km, carga) {
+          super(modelo, marca, precio, km);
+          this.carga = carga;
+        }
+
+        get dameCarga() {
+          return this.carga;
+        }
+
+        setCarga(carga) {
+          this.carga = carga;
+        }
+
+        caracteristicas() {
+          document.write(`
+      Modelo: ${this.dameModelo}<br>
+      Marca: ${this.dameMarca}<br>
+      Precio: ${this.damePrecio}<br>
+      Km: ${this.dameKm}<br>
+      Carga: ${this.dameCarga}<br>
+      `);
+        }
+      }
+      document.write("<hr>");
+      let furgo1 = new Furgoneta("Kangoo", "Renault", 12000, 150000, 3500);
+      furgo1.caracteristicas();
+
+      document.write(furgo1.dameCarga);
+    </script>
+  </body>
+</html>
