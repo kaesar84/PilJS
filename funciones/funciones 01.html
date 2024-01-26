@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones 01</title>
+  </head>
+  <body>
+    <script>
+      // metodo 1
+      function area_cuadrado(lado) {
+        return lado * lado;
+      }
+      document.write("- Método 1<br>");
+      document.write(area_cuadrado(5) + "<br>");
+
+      // metodo 2
+      const area_cuadrado2 = function (lado) {
+        return lado * lado;
+      };
+      document.write("- Método 2<br>");
+      document.write(area_cuadrado2(6) + "<br>");
+
+      // metodo 3
+      // con un solo parametro se pueden omitir los parentesis
+      const area_cuadradoArrow = (lado) => lado * lado;
+      document.write("- Método 3<br>");
+      document.write(area_cuadradoArrow(7) + "<br>");
+
+      const area_triangulo = (base, altura) => (base * altura) / 2;
+      document.write("- Area triángulo<br>");
+      document.write(area_triangulo(7, 2) + "<br>");
+    </script>
+  </body>
+</html>

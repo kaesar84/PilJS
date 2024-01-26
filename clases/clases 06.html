@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clases 06</title>
+  </head>
+  <body>
+    <script>
+      // clases ABSTRACTAS (no existen como tal)
+
+      class Persona {
+        habla() {
+          // solo hay que dejar el metodo vacio y declarlo en la clase que hereda
+          // Devuelve undefined si es llamado sin definirlo en la heredera
+          throw new Error("Este es un método abstracto y debe sobreescribirse en las subclases");
+        }
+      }
+
+      class Empleado extends Persona {
+        // habla() {
+        //   return "Habla Español";
+        // }
+      }
+
+      let emp1 = new Empleado();
+      document.write(emp1.habla());
+    </script>
+  </body>
+</html>

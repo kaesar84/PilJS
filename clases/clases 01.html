@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clases 01</title>
+  </head>
+  <body>
+    <script>
+      class Usuario {
+        // Propiedades (this)
+        // Constructor
+        constructor(nombre, contrasena, perfil) {
+          this.nombre = nombre;
+          this.contrasena = contrasena;
+          this.perfil = perfil;
+        }
+
+        // Métodos
+        saludar() {
+          document.write(`Hola ${this.nombre} <br>`);
+        }
+
+        login() {
+          return "Estoy haciendo login";
+        }
+
+        logut() {
+          return "Estoy haciendo logout";
+        }
+      }
+
+      // Herencia
+      class Estudiante extends Usuario {
+        constructor(nombre, contrasena, perfil, curso) {
+          super(nombre, contrasena, perfil);
+          this.curso = curso;
+        }
+
+        estudia(tema) {
+          return `Estoy estudiando ${tema}`;
+        }
+      }
+
+      let luisito = new Usuario("Luisito", 1234, "Admin");
+      document.write(luisito.nombre + "<br>");
+      document.write(luisito.contrasena + "<br>");
+      document.write(luisito.perfil + "<br>");
+      luisito.saludar();
+
+      document.write("<hr>");
+
+      let pepito = new Estudiante("Pepito", 4321, "Alumno", "Primero");
+      document.write(pepito.nombre + "<br>");
+      document.write(pepito.contrasena + "<br>");
+      document.write(pepito.perfil + "<br>");
+      document.write(pepito.curso + "<br>");
+
+      document.write(pepito.estudia("Matemáticas"));
+    </script>
+  </body>
+</html>

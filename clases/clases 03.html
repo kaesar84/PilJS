@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clases 03</title>
+  </head>
+  <body>
+    <script>
+      // uso SUPER
+      class Animal {
+        constructor(ojos, patas) {
+          this.ojos = ojos;
+          this.patas = patas;
+        }
+
+        come(alimento) {
+          return `El animal come ${alimento}`;
+        }
+
+        caracteristicas() {
+          return `El animal introducido tiene ${this.ojos} y tiene ${this.patas} patas`;
+        }
+      }
+
+      class Perro extends Animal {
+        constructor(ojos, patas, hocico) {
+          super(ojos, patas);
+          this.hocico = hocico;
+        }
+        caracteristicas() {
+          return `${super.caracteristicas()} y tiene ${
+            this.patas
+          } patas y tiene ${this.hocico} hocico.`;
+        }
+
+        // come(alimento){
+        //   super.come()
+        // }
+      }
+
+      let dinki = new Perro(2, 4, 1);
+      document.write(dinki.caracteristicas());
+      document.write("<hr>");
+      document.write(dinki.come("carne"));
+    </script>
+  </body>
+</html>

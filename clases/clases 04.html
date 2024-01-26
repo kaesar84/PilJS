@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clases 04</title>
+  </head>
+  <body>
+    <script>
+      // MAP
+      // diferencia entre map y array, map permite clave valor
+
+      let map1 = new Map();
+      map1.set("nombre", "César");
+      map1.set("edad", "39");
+      map1.set("sexo", "Masculino");
+
+      document.write(map1.get("nombre"));
+      document.write("<br>");
+      document.write(map1.get("edad"));
+      document.write("<br>");
+      document.write(map1.get("sexo"));
+      document.write("<br>");
+      document.write(map1.has("nombre"));
+      
+      let map2 = new Map([
+        ["nombre", "Luis"],
+        ["edad", "50"],
+      ]);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clases 02</title>
+  </head>
+  <body>
+    <script>
+      // Herencia de clases predefinidas
+
+      class ManejoArray extends Array {
+        // getters (son propiedades no métodos)
+
+        get primero() {
+          return this[0];
+        }
+
+        get ultimo() {
+          return this[this.length - 1];
+        }
+      }
+
+      let array1 = new ManejoArray();
+      array1.push("César", "Luis", "Carlos", "Maria", "Marcos");
+
+      console.log(array1);
+      document.write(array1.primero);
+      document.write("<br>");
+      document.write(array1.ultimo);
+    </script>
+  </body>
+</html>

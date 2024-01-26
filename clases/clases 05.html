@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clases 05</title>
+  </head>
+  <body>
+    <script>
+      // Heredamos de clase MAP
+      class MapaTipos extends Map {
+        // limitamos que solo acepte el tipo de datos introducido
+        constructor(tipo_clave, tipo_valor, valores) {
+          if (valores) {
+            for (let [clave, valor] of valores) {
+              if (typeof clave !== tipo_clave || typeof valor !== tipo_valor) {
+                // document.write(
+                //   `No se corresponden los tipos de ${clave}, ${valor}`
+                // );
+                // document.write("<br>");
+                throw new TypeError(
+                  `Error en los tipos para ${clave}, ${valor}`
+                );
+              }
+            }
+          }
+
+          super(valores);
+        }
+      }
+
+      let mis_datos = [
+        ["nombre", "César"],
+        ["apellido", "Fernández"],
+        ["edad", 39],
+      ];
+
+      let datos = new MapaTipos("string", "string", mis_datos);
+
+      datos.forEach((element) => {
+        document.write(element + " ");
+      });
+
+      console.log(datos);
+    </script>
+  </body>
+</html>
