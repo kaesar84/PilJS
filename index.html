@@ -22,7 +22,7 @@
 
       function ac() {
         let intro = document.getElementById("btn1").value;
-
+        let check = false;
         // console.log("Introducido: " + intro);
 
         for (let i = 0; i < palabra.length; i++) {
@@ -30,11 +30,20 @@
 
           if (element == intro) {
             rellenaArray(i, element);
+            check = true;
             if (palabra == copiaPalabra.join("")) {
               alert("has Acertado");
             }
           }
+          
         }
+        if (!check) vidas--;
+        console.log(vidas);
+        
+        if(vidas<1){
+            alert("loser")
+        }
+          
       }
 
       function rellenaArray(index, element) {
