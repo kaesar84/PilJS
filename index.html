@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="btn1" type="text" />
+    <button onclick="ac()">boton</button>
+
+    <script>
+      let palabra = "abca";
+      let longitudPalabra = palabra.length;
+
+      let copiaPalabra = new Array(longitudPalabra);
+      let copiaPalabraString = copiaPalabra.toString;
+
+      let intro = document.getElementById("btn1").value;
+
+      let vidas = 5;
+
+      function ac() {
+        let intro = document.getElementById("btn1").value;
+
+        // console.log("Introducido: " + intro);
+
+        for (let i = 0; i < palabra.length; i++) {
+          const element = palabra[i];
+
+          if (element == intro) {
+            rellenaArray(i, element);
+            if (palabra == copiaPalabra.join("")) {
+              alert("has Acertado");
+            }
+          }
+        }
+      }
+
+      function rellenaArray(index, element) {
+        copiaPalabra[index] = element;
+      }
+    </script>
+  </body>
+</html>
