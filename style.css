@@ -1,35 +1,77 @@
+:root {
+  --darkBlue-color: #202b40;
+  --light-color: #d8f3fa;
+  --green-color: #36ad68;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Encode Sans", sans-serif;
 }
 
+header {
+  width: 100vw;
+  background-color: var(--darkBlue-color);
+  padding: 2rem;
+  display: flex;
+  color: var(--green-color);
+  align-items: center;
+  justify-content: space-around;
+}
+
+.col1,
+.col2,
+.col3 {
+  width: 30vw;
+  display: flex;
+  align-items: start;
+  justify-content: start;
  
+}
+.col3{
+  align-items: end;
+  justify-content: end;
+}
 
 
-#zonaPalabra, #zonaAbc {
+
+
+#home {
+  font-size: 3rem;
+  color: var(--green-color);
+}
+
+#vida,
+#numVida {
+  font-size: 3rem;
+  color: var(--green-color);
+}
+
+#zonaPalabra,
+#zonaAbc {
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#contenedorPalabraBuscada{
-    width: 100vw;
-    display: flex;
-    background-color: red;
-    padding: 5rem;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    
+#contenedorPalabraBuscada {
+  width: 100vw;
+  display: flex;
+  background-color: var(--light-color);
+  padding: 5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 #botonesAbecedario {
   width: 100vw;
   display: flex;
-  background-color: rebeccapurple;
+  background-color: var(--darkBlue-color);
   padding: 5rem;
   align-items: center;
   justify-content: center;
@@ -45,29 +87,58 @@
   font-size: 2rem;
   border-radius: 5px;
   transition: all 0.5s;
+  color: var(--green-color);
+  border: 1px solid var(--light-color);
+  background-color: var(--darkBlue-color);
 }
 
 .btnLetra:hover {
   scale: 1.1;
+  background-color: var(--green-color);
+  color: var(--darkBlue-color);
 }
 
 .btnLetraHide {
   opacity: 0.2;
 }
 
-
-.btnBuscada, .btnEncontrada{
-    background-color: aqua;
-    width: 4rem;
-    height: auto;
-    border: none;
-    font-size: 2rem;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 5px;
-    
+.btnBuscada,
+.palabraEncontrada,
+.palabraError {
+  background-color: var(--darkBlue-color);
+  width: 4rem;
+  height: auto;
+  border: none;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
+  color: var(--green-color);
+  border: 1px solid var(--light-color);
 }
 
-.btnEncontrada{
-    color: black;
+.palabraEncontrada {
+  background-color: var(--green-color);
+  color: (var(--light-color));
+  animation: bravo 1.5s;
+  animation-fill-mode: forwards;
+  border: none;
+}
+
+@keyframes bravo {
+  from {
+    width: 4rem;
+    padding: 1rem;
+    height: auto;
+  }
+  to {
+    width: 4.5rem;
+    padding: 1.1rem;
+    height: auto;
+    font-weight: bold;
+  }
+}
+
+.palabraError {
+  opacity: 0.2;
 }

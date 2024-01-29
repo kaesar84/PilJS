@@ -1,4 +1,4 @@
-let palabraMinus = "aba";
+let palabraMinus = "cacahuete";
 let palabra = palabraMinus.toLocaleUpperCase();
 let longitudPalabra = palabra.length;
 
@@ -26,6 +26,28 @@ function buscada() {
   //
 }
 
+
+// Cambio de estilo si la palabra es correcta
+function cambioAcierto() {
+  let palabraOk = document.querySelectorAll(".btnBuscada");
+
+  palabraOk.forEach(function (element) {
+    element.classList.add("palabraEncontrada");
+    element.classList.remove("btnBuscada");
+  });
+}
+
+// Cambio de estilo si la palabra es incorrecta
+function cambioError() {
+  let palabraOk = document.querySelectorAll(".btnBuscada");
+
+  palabraOk.forEach(function (element) {
+    element.classList.add("palabraError");
+    element.classList.remove("btnBuscada");
+  });
+}
+
+// valida la existencia de la letra
 function ac(letra) {
   let intro = letra;
   let check = false;
@@ -39,7 +61,8 @@ function ac(letra) {
       buscada();
     }
     if (palabra == copiaPalabra.join("")) {
-      alert("has Acertado");
+      console.log("has Acertado");
+      cambioAcierto();
       break;
     }
   }
@@ -48,10 +71,12 @@ function ac(letra) {
   console.log(vidas);
 
   if (vidas < 1) {
+    cambioError();
     alert("loser");
   }
 }
 
+// Rellena el array con el caracter correspondiente
 function rellenaArray(index, element) {
   copiaPalabra[index] = element;
 
