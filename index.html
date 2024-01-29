@@ -4,51 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <input id="btn1" type="text" />
-    <button onclick="ac()">boton</button>
+    <!-- <input id="btn1" type="text" />
+    <button onclick="ac()">boton</button> -->
 
-    <script>
-      let palabra = "abca";
-      let longitudPalabra = palabra.length;
+<section id="zonaPalabra">
+    <div id="contenedorPalabraBuscada">
 
-      let copiaPalabra = new Array(longitudPalabra);
-      let copiaPalabraString = copiaPalabra.toString;
+    </div>
+</section>
 
-      let intro = document.getElementById("btn1").value;
 
-      let vidas = 5;
 
-      function ac() {
-        let intro = document.getElementById("btn1").value;
-        let check = false;
-        // console.log("Introducido: " + intro);
+    <section id="zonaAbc">
+      <div id="botonesAbecedario">
+        <!-- Los botones se generarán dinámicamente con JavaScript -->
+      </div>
+    </section>
 
-        for (let i = 0; i < palabra.length; i++) {
-          const element = palabra[i];
-
-          if (element == intro) {
-            rellenaArray(i, element);
-            check = true;
-            if (palabra == copiaPalabra.join("")) {
-              alert("has Acertado");
-            }
-          }
-          
-        }
-        if (!check) vidas--;
-        console.log(vidas);
-        
-        if(vidas<1){
-            alert("loser")
-        }
-          
-      }
-
-      function rellenaArray(index, element) {
-        copiaPalabra[index] = element;
-      }
-    </script>
+    <script src="scripts.js"></script>
   </body>
 </html>
