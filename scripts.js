@@ -110,7 +110,7 @@ let deportes = [
   "Esqui",
 ];
 
-let personajesDragonBall = [
+let dragonBall = [
   "Goku",
   "Vegeta",
   "Piccolo",
@@ -138,7 +138,7 @@ let personajesDragonBall = [
   "Satan",
 ];
 
-let personajesNaruto = [
+let naruto = [
   "Naruto",
   "Sasuke",
   "Sakura",
@@ -204,7 +204,7 @@ let planetas = [
   "Neptuno",
 ];
 
-let objetosEscolares = [
+let escuela = [
   "Lapiz",
   "Cuaderno",
   "Boligrafo",
@@ -258,10 +258,9 @@ let vehiculos = [
   "Jet",
 ];
 
-function palabraAleatoria(array) {
-  let indice = Math.floor(Math.random() * array.length);
-  return array[indice];
-}
+let temaAleatorio = animales.concat(colores,profesiones,colores,deportes,paises,planetas,escuela,dragonBall,naruto);
+
+
 
 let arraySeleccionado = animales;
 let randomP = palabraAleatoria(arraySeleccionado);
@@ -483,4 +482,9 @@ function rellenaArray(index, element) {
   }
 }
 
-//efecto confeti
+function palabraAleatoria(array) {
+  let indice = Math.floor(Math.random() * array.length);
+  return array[indice];
+}
+
+
