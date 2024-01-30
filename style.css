@@ -11,6 +11,9 @@
   font-family: "Encode Sans", sans-serif;
 }
 
+body {
+  background-color: var(--darkBlue-color);
+}
 header {
   width: 100vw;
   background-color: var(--darkBlue-color);
@@ -28,15 +31,11 @@ header {
   display: flex;
   align-items: start;
   justify-content: start;
- 
 }
-.col3{
+.col3 {
   align-items: end;
   justify-content: end;
 }
-
-
-
 
 #home {
   font-size: 3rem;
@@ -44,9 +43,13 @@ header {
 }
 
 #vida,
-#numVida {
+#numVida, #reset {
   font-size: 3rem;
   color: var(--green-color);
+}
+
+#reset {
+  color: var(--light-color);
 }
 
 #zonaPalabra,
@@ -141,4 +144,14 @@ header {
 
 .palabraError {
   opacity: 0.2;
+}
+
+footer {
+  width: 100vw;
+  height: 5rem;
+  background-color: var(--darkBlue-color);
+  padding: 2rem;
+  display: flex;
+  color: var(--green-color);
+
 }

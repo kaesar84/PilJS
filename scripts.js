@@ -1,14 +1,78 @@
-let palabraMinus = "cacahuete";
+let palabraMinus = "hola";
 let palabra = palabraMinus.toLocaleUpperCase();
 let longitudPalabra = palabra.length;
 
 let copiaPalabra = new Array(longitudPalabra);
 let copiaPalabraString = copiaPalabra.toString;
 
-// let intro = document.getElementById("btn1").value;
+let zonaAbc = document.getElementById("zonaAbc");
 
-let vidas = 5;
+let vidas = 1;
+let vidaReiniciar = vidas;
+let numVida = document.getElementById("numVida");
 
+// valor de vidas inicial
+contadorVidas(vidas);
+
+// reset
+let reset = document.getElementById("reset");
+
+// contador vidas
+function contadorVidas(vida) {
+  if (vida == 9) {
+    numVida.textContent = "counter_9";
+  } else if (vida == 8) {
+    numVida.textContent = "counter_8";
+  } else if (vida == 7) {
+    numVida.textContent = "counter_7";
+  } else if (vida == 6) {
+    numVida.textContent = "counter_6";
+  } else if (vida == 5) {
+    numVida.textContent = "counter_5";
+  } else if (vida == 4) {
+    numVida.textContent = "counter_4";
+  } else if (vida == 3) {
+    numVida.textContent = "counter_3";
+  } else if (vida == 2) {
+    numVida.textContent = "counter_2";
+  } else if (vida == 1) {
+    numVida.textContent = "counter_1";
+  } else if (vida == 0) {
+    numVida.textContent = "counter_0";
+    reset.textContent = "restart_alt";
+  }
+}
+
+function reiniciar() {
+  vidas = vidaReiniciar;
+}
+
+// botones abecedario
+document.addEventListener("DOMContentLoaded", function () {
+  rellenaArray(0, "*");
+  buscada();
+  // Obtener el contenedor donde se agregarán los botones
+  var contenedorBotones = document.getElementById("botonesAbecedario");
+
+  // Crear un array con las letras del abecedario
+  var letrasAbecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+  // Iterar sobre el array y crear un botón para cada letra
+  letrasAbecedario.forEach(function (letra) {
+    var btnLetra = document.createElement("button");
+    btnLetra.classList.add("btnLetra");
+    btnLetra.textContent = letra;
+
+    btnLetra.addEventListener("click", function () {
+      validarLetraIntroducida(letra);
+      btnLetra.classList.add("btnLetraHide");
+      btnLetra.classList.remove("btnLetra");
+    });
+    contenedorBotones.appendChild(btnLetra);
+  });
+});
+
+// genera la palabra a buscar
 function buscada() {
   let contenedorPalabraBuscada = document.getElementById(
     "contenedorPalabraBuscada"
@@ -25,7 +89,6 @@ function buscada() {
   });
   //
 }
-
 
 // Cambio de estilo si la palabra es correcta
 function cambioAcierto() {
@@ -48,7 +111,7 @@ function cambioError() {
 }
 
 // valida la existencia de la letra
-function ac(letra) {
+function validarLetraIntroducida(letra) {
   let intro = letra;
   let check = false;
 
@@ -69,9 +132,11 @@ function ac(letra) {
 
   if (!check) vidas--;
   console.log(vidas);
+  contadorVidas(vidas);
 
   if (vidas < 1) {
     cambioError();
+    zonaAbc.style.display = "none";
     alert("loser");
   }
 }
@@ -86,28 +151,3 @@ function rellenaArray(index, element) {
     }
   }
 }
-
-// botones abecedario
-document.addEventListener("DOMContentLoaded", function () {
-  rellenaArray(0, "*");
-  buscada();
-  // Obtener el contenedor donde se agregarán los botones
-  var contenedorBotones = document.getElementById("botonesAbecedario");
-
-  // Crear un array con las letras del abecedario
-  var letrasAbecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-
-  // Iterar sobre el array y crear un botón para cada letra
-  letrasAbecedario.forEach(function (letra) {
-    var btnLetra = document.createElement("button");
-    btnLetra.classList.add("btnLetra");
-    btnLetra.textContent = letra;
-
-    btnLetra.addEventListener("click", function () {
-      ac(letra);
-      btnLetra.classList.add("btnLetraHide");
-      btnLetra.classList.remove("btnLetra");
-    });
-    contenedorBotones.appendChild(btnLetra);
-  });
-});
