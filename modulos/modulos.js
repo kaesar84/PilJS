@@ -12,3 +12,14 @@ export function calculo_total(cantidad) {
   let total = cantidad - calculo_IRPF(cantidad) + calculo_IVA(cantidad);
   return total;
 }
+
+
+// puedes hacerlo tambien, se harían con la declaracion las funciones normal
+// export{calculo_IVA}
+// export{calculo_IRPF as irpf}
+
+// export{
+//     calculo_IRPF,
+//     calculo_IVA
+// }
+

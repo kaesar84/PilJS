@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weakssets</title>
+  </head>
+  <body>
+    WEAKSET. <br />
+    Solo puede almacenar objetos.<br />
+    No tiene size.<br />
+    No es iterable.<br />
+    Métodos ad(), delete(), has()<br />
+    Los objetos desaparecen de memoria si no la utilizas.<br />
+    <script>
+      const miWeakSet = new WeakSet();
+
+      const empleado1 = {
+        nombre: "César",
+        salario: 18000,
+        antigüedad: 5,
+      };
+
+      const empleado2 = {
+        nombre: "Maria",
+        salario: 20000,
+        antigüedad: 6,
+      };
+
+      const coche1 = {
+        marca: "Seat",
+        modelo: "León",
+        potencia: 270,
+      };
+
+      // add()
+      miWeakSet.add(empleado1);
+      miWeakSet.add(empleado2);
+      miWeakSet.add(coche1);
+
+      console.log(miWeakSet);
+
+      //has()
+      console.log(miWeakSet.has(empleado2));
+
+      //delete
+      miWeakSet.delete(coche1);
+      console.log(miWeakSet);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maps</title>
+  </head>
+  <body>
+    MAPS <br />
+    Lista por clave-valor
+
+    <script>
+      const empleado = new Map();
+
+      empleado.set("Nombre", "César");
+      empleado.set("Salario", 3500);
+      empleado.set("Antigüedad", 5);
+      empleado.set("Activo", true);
+      empleado.set("Com Trim1", [100, 150, 200]);
+
+      console.log(empleado);
+
+      // size()
+      console.log(empleado.size);
+
+      // has()
+      console.log(empleado.has("Nombre"));
+
+      //get()
+      console.log(empleado.get("Nombre"));
+
+      //clear()
+      //   empleado.clear();
+      //   console.log(empleado)
+
+      // constructor con parametro
+      const empleado2 = new Map(empleado);
+
+      empleado2.set("Nombre", "Luis");
+      console.log(empleado2);
+
+      // RECORRER
+      // recorrer clave y valor
+      empleado2.forEach((valor, clave) => {
+        console.log(`${clave} => ${valor}`);
+      });
+
+      // recorrer valor
+      empleado2.forEach((valores) => {
+        console.log(valores);
+      });
+
+      // método entries devuelve un objeto iterable
+      for (const datos of empleado.entries()) {
+        console.log(datos);
+      }
+
+      //devuelve solo claves
+      for (const claves of empleado.keys()) {
+        console.log(claves);
+      }
+
+      //devuelve solo claves
+      for (const valores of empleado.values()) {
+        console.log(valores);
+      }
+    </script>
+  </body>
+</html>

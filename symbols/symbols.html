@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symbols</title>
+  </head>
+  <body>
+    SYMBOLS <br />
+
+    No se pueden sobreescribir <br />
+    No puede iguales <br />
+    Para encapsular propiedades <br />
+    No es iterable, oculta las propiedades simbol <br>
+
+    <script>
+      let s1 = Symbol("César");
+      let s2 = Symbol("César");
+
+      console.log(s1 === s2);
+      console.log(typeof s1);
+
+      // no se puede sobreescribir el nombre
+      const NOMBRE = Symbol();
+
+      
+
+      // se pone con corchetes
+      const alumno = {
+        [NOMBRE]: "Juan",
+        apellido: "Fernández",
+        edad: 39,
+      };
+      
+      const ESTUDIAR = Symbol();
+      alumno[ESTUDIAR]= function(){console.log("El alumno estudia")};
+
+      console.log(alumno);
+      alumno[ESTUDIAR]();
+
+      console.log(Object.getOwnPropertySymbols(alumno))
+
+    </script>
+  </body>
+</html>

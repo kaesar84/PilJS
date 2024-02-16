@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weakmaps</title>
+</head>
+<body>
+    WEAKMAPS <br>
+    Solo puede almacenar objetos, arrays o funciones<br>
+    No son iterables<br>
+    Se borran de la memoria si no se utilizan<br>
+    get(), set(), has(), delete() <br>
+
+<script>
+    const empleado ={
+        empresa: "Inc",
+        fundación: 2024
+    }
+
+    const almacenEmpleados = new WeakMap();
+
+    almacenEmpleados.set(empleado,"César");
+
+    console.log(almacenEmpleados);
+
+
+</script>
+
+
+
+</body>
+</html>

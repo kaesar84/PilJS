@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sets</title>
+  </head>
+  <body>
+    SET <br />
+    No permite elementos duplicados <br />
+    No están ni indexados ni ordenados
+    <script>
+      const nombres = new Set();
+      console.log(nombres);
+
+      nombres.add("César");
+      nombres.add("Luís");
+      nombres.add("Marcos");
+      nombres.add("Antonio");
+
+      // Añadir repetido ni lo incluye
+      nombres.add("César");
+      nombres.add("Gerad");
+      console.log(nombres);
+
+      // tamaño del set
+      console.log(nombres.size);
+
+      // existe el elemento - true
+      console.log(nombres.has("César"));
+      console.log(nombres.has("Manolo"));
+
+      // borrar elemento
+      nombres.delete("Antonio");
+      console.log(nombres);
+
+      // borrar todo
+      //   nombres.clear();
+      //   console.log(nombres);
+
+      // recorrido
+      nombres.forEach((nombre) => {
+        console.log(nombre);
+      });
+
+      // desechar elementos duplicados en un ARRAY
+      const nombresArray =["César", "Juan", "Pepe", "Sara", "Sonia", "Antonio", "César", "Sandra", "Sonia"];
+      console.log(nombresArray);
+
+      const nombreSinDuplicar = new Set(nombresArray);
+      console.log(nombreSinDuplicar);
+
+
+</script>
+  </body>
+</html>
