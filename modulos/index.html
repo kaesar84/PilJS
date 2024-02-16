@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mudlos</title>
+  </head>
+  <body>
+    <script type="module">
+     // import { calculo_IVA, calculo_IRPF, calculo_total } from "./modulos.js";
+      import * as misfunciones from "./modulos.js";
+
+      let contenedorTotal = document.getElementById("contenedorTotal");
+      let contenedorIva = document.getElementById("contenedorIva");
+      let contenedorirpf = document.getElementById("contenedorirpf");
+      let origenDatos = document.getElementById("origen");
+      let btn = document.getElementById("btn");
+
+      btn.addEventListener("click", () => {
+        let valor = parseFloat(origenDatos.value);
+        let iva = misfunciones.calculo_IVA(valor);
+        let irpf = misfunciones.calculo_IRPF(valor);
+        let total = misfunciones.calculo_total(valor);
+
+        contenedorIva.innerHTML = iva;
+        contenedorIrpf.innerHTML = irpf;
+        contenedorTotal.innerHTML = total;
+      });
+    </script>
+
+    <input type="text" id="origen" />
+    <br /><br />
+    <button id="btn">Calcular</button>
+    <br /><br />
+IVA:
+    <p id="contenedorIva"></p>
+    IRPF:
+    <p id="contenedorIrpf"></p>
+    TOTAL:
+    <p id="contenedorTotal"></p>
+  </body>
+</html>
