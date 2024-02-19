@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      body {
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      #parrafo1,
+      #parrafo4 {
+        background-color: pink;
+      }
+
+      #parrafo2,
+      #parrafo3 {
+        display: none;
+      }
+    </style>
+
+    <form action=""></form>
+
+    <p id="parrafo1">Ver los párrafos ocultos.</p>
+    <p id="parrafo2">Párrafo Oculto 1</p>
+    <p id="parrafo3">Párrafo Oculto 2</p>
+
+    <p id="parrafo4">Escribir párrafos.</p>
+
+    <p id="parrafo5"></p>
+    <p id="parrafo6"></p>
+
+    <script>
+      let elementoHead;
+      let elementoBody;
+      let parrafo1;
+      let parrafo2;
+      let parrafo3;
+      let parrafo4;
+      let parrafo5;
+      let parrafo6;
+      let visible = false;
+
+      elementoHead = document.head;
+      elementoBody = document.body;
+      parrafo1 = document.getElementById("parrafo1");
+      parrafo2 = document.getElementById("parrafo2");
+      parrafo3 = document.getElementById("parrafo3");
+      parrafo4 = document.getElementById("parrafo4");
+      parrafo5 = document.getElementById("parrafo5");
+      parrafo6 = document.getElementById("parrafo6");
+
+      parrafo1.addEventListener("click", mostrarParrafos);
+      parrafo4.addEventListener("click", escribirParrafos);
+
+      function mostrarParrafos() {
+        if (!visible) {
+          parrafo2.style.display = "flex";
+          parrafo3.style.display = "flex";
+          visible = true;
+        } else {
+          parrafo2.style.display = "none";
+          parrafo3.style.display = "none";
+          visible = false;
+        }
+      }
+
+      function escribirParrafos() {
+        if (parrafo5.innerHTML == "" && parrafo6.innerHTML == "") {
+          parrafo5.innerHTML = "Hola";
+          parrafo6.innerHTML = "Adiós";
+        } else {
+          parrafo5.innerHTML = "";
+          parrafo6.innerHTML = "";
+        }
+      }
+      //   console.log(elementoHead);
+      //   console.log(elementoBody);
+      //   console.log(parrafo1.textContent);
+      //   console.log(parrafo2.textContent);
+      //   console.log(parrafo3.textContent);
+    </script>
+  </body>
+</html>
