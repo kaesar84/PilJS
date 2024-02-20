@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  <link rel="stylesheet" href="./estilos/patterns.css">
-  <link rel="stylesheet" href="./estilos/styleClass.css">
+    <link rel="stylesheet" href="./estilos/patterns.css" />
+    <link rel="stylesheet" href="./estilos/styleClass.css" />
   </head>
   <body>
     <div class="containerBtn">
@@ -15,17 +15,44 @@
     </div>
 
     <section>
-      <div class="containerMontains">
-        <img src="../media/montain1.jpg" alt="" />
-        <img src="../media/montain2.jpg" alt="" />
-        <img src="../media/montain3.jpg" alt="" />
-      </div>
-
-      <div class="containerAnimals">
-        <img src="../media/animal1.jpg" alt="" />
-        <img src="../media/animal2.jpg" alt="" />
-        <img src="../media/animal3.jpg" alt="" />
+      <div class="containerFotos">
+        <img src="../media/montain1.jpg" class="montains" alt="" />
+        <img src="../media/montain2.jpg" class="montains" alt="" />
+        <img src="../media/montain3.jpg" class="montains" alt="" />
+        <img src="../media/animal1.jpg" class="animals" alt="" />
+        <img src="../media/animal2.jpg" class="animals" alt="" />
+        <img src="../media/animal3.jpg" class="animals" alt="" />
       </div>
     </section>
   </body>
+
+  <script>
+    let btnAll = document.getElementById("btnAll");
+    let btnMontain = document.getElementById("btnMontain");
+    let btnAnimals = document.getElementById("btnAnimals");
+
+    const montains = document.getElementsByClassName("montains");
+    const animals = document.getElementsByClassName("animals");
+
+    btnMontain.addEventListener("click", () => {
+      for (let i = 0; i < animals.length; i++) {
+        animals[i].style.display = "none";
+        montains[i].style.display = "flex";
+      }
+    });
+
+    btnAnimals.addEventListener("click", () => {
+      for (let i = 0; i < montains.length; i++) {
+        montains[i].style.display = "none";
+        animals[i].style.display = "flex";
+      }
+    });
+
+    btnAll.addEventListener("click", () => {
+      for (let i = 0; i < montains.length; i++) {
+        montains[i].style.display = "flex";
+        animals[i].style.display = "flex";
+      }
+    });
+  </script>
 </html>
